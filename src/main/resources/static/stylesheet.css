@@ -1,0 +1,127 @@
+div container {
+    border-radius: 50px;
+    height: 50px;
+    width: 75px;
+    background-color: white;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+p {
+    color: white;
+}
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+body.mansion {
+    background-image: url("castle.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.foyer {
+    background-image: url("foyer.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.kitchen {
+    background-image: url("kitchen.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.library {
+    background-image: url("library.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.diningroom {
+    background-image: url("diningroom.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.parlor {
+    background-image: url("parlor.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.secretroom {
+    background-image: url("secretroom.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.vault {
+    background-image: url("vault.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.frontroom {
+    background-image: url("frontroom.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.image1
+{
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.path__display {
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    padding: 0.5em 0.75em;
+    text-align: right;
+    margin: auto;
+}
+form {
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    padding: 0.5em 0.75em;
+    text-align: right;
+    margin: auto;
+}
+div.keys {
+    position: absolute;
+    bottom: 20%;
+}
+
+
+

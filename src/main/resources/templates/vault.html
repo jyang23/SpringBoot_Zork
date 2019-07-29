@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="/jsfile.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheet.css">
+    <title>Vault Room</title>
+    <link href = "https://fonts.googleapis.com/css?family=Fascinate" rel="stylesheet"/>
+<!--=================================================================================================================-->
+    <style>
+        .image2 {
+            height: 50px;
+            display: block;
+            margin-right: auto;
+        }
+        .footer,.topnav,.path__display {
+            font-family: "Fascinate"!important ;
+            color: white;
+            text-align: center;
+            font-size: 25px;
+        }
+        button.north {
+            font-family: "Fascinate"!important ;
+            border-radius: 12px;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            display: inline-block;
+        }
+        button.east {
+            font-family: "Fascinate"!important ;
+            border-radius: 12px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            display: inline-block;
+        }
+        button.south {
+            font-family: "Fascinate"!important ;
+            border-radius: 12px;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            display: inline-block;
+        }
+        button.west {
+            font-family: "Fascinate"!important ;
+            border-radius: 12px;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            display: inline-block;
+        }
+        button.secret {
+            font-family: "Fascinate"!important ;
+            border-radius: 12px;
+            color: transparent;
+            text-align: center;
+            display: inline-block;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            float: right;
+        }
+        button.money {
+            font-family: "Fascinate"!important ;
+            border-radius: 20px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+        }
+        h2 {
+            font-family: "Fascinate"!important ;
+        }
+    </style>
+<!--=================================================================================================================-->
+</head>
+<body class="vault">
+<!--=================================================================================================================-->
+<div class="topnav">
+    <div>
+        <p style="float:left;">Items:</p>
+        <img src="https://nerdburglars.net/wp-content/uploads/2015/08/mastersword.png"
+             class ="image2" alt="sword" style="float:left;">
+    </div>
+    <div class="calculator" style="float:right;" >
+        <div class="cash">
+            <div class="money__display" th:each="user : ${users}">
+                <span>You have :$<span>[[${user.loot}]]</span></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=================================================================================================================-->
+<div class="container">
+    <h2>You found $2001, click to steal!!</h2>
+    <button class = "money"><a th:href="@{/add/{room}/{id}(room='vault',id=2001)}">$$</a></button>
+    <div class="keys" style="text-align:center;width:480px;">
+        <button class="north" disabled>North</a></button><br><br>
+        <button class="west" disabled>West</a></button>
+        <button class="east"><a th:href="@{/parlor}">East</a></button><br><br>
+        <button class="south" disabled>South</a></button>
+    </div>
+    <button class="secret" title="secret room shhhh.."><a th:href="@{/secretroom}">.</a>secret room shhhh..</button>
+    <h2>This room looks safe, I don't see any monsters around</h2>
+    <div class="path">
+        <div class="path__display"><span id="message"></span></div>
+        <form action="javascript:Zork();">
+            <input type="text" name="command" id="command">
+            <input type="submit" id="submit" name="submit" class="btn btn-dark">
+        </form>
+    </div>
+</div>
+<!--=================================================================================================================-->
+<div class="footer">
+    <p>You Are In the Vault</p>
+    <input type="image" src="https://officialpsds.com/imageview/7n/93/7n93n8_large.png?1521316499"
+           name="goldplate" class="image1" onclick = "GoldPlating();"/>
+</div>
+<!--=================================================================================================================-->
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</html>
+<!--=================================================================================================================-->
